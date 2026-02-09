@@ -1,13 +1,12 @@
-# OSINT Vortex Engine
+# osint-vortex-engine
 
-Advanced correlation engine for Open Source Intelligence.
+OSINT-style aggregation and analysis engine (safe-by-default).
 
-## 🗺️ Architecture
-```mermaid
-graph LR
-    T[Target] --> S[Vortex Core]
-    S --> D1[(Shodan)]
-    S --> D2[(Whois)]
-    S --> D3[(Social)]
-    D1 & D2 & D3 --> R[Report]
-```
+## Notebooks
+- `notebooks/01_osint_entity_extraction_and_graph.ipynb` — **offline** entity extraction + relationship graph + prioritization (executed outputs saved)
+
+## Executed artefacts
+- `docs/executed/01_osint_entity_extraction_and_graph.html`
+
+## License
+MIT
