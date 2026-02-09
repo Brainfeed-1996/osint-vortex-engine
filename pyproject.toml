@@ -1,0 +1,33 @@
+[project]
+name = "osint-vortex-engine"
+version = "0.1.0"
+description = "Safe-by-default OSINT-style entity extraction and relationship graphing (offline)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Olivier Robert-Duboille"}]
+dependencies = [
+  "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+osint-vortex = "osint_vortex_engine.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
